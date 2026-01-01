@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #FFF7F9;
+  color: #4A4A4A;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #C8A2C8, #F7D9E3);
+  padding: 50px 20px;
+  border-radius: 25px;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 32px;
+}
+
+/* Sections */
+.section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.counter {
+  font-size: 22px;
+  color: #A67BA5;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: 0.4s;
+  box-shadow: 0 10px 20px rgba(0,0,0,.15);
+}
+
+.gallery img:hover {
+  transform: scale(1.08);
+}
+
+/* Message */
+button {
+  background: #C8A2C8;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.message-box {
+  display: none;
+  margin-top: 20px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.1);
+  line-height: 1.9;
+}
+
+/* Music Button */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #E6C27A;
+  color: white;
+  border: none;
+  font-size: 22px;
+}
+
+/* Floating Hearts */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  color: #E6A5C5;
+  font-size: 20px;
+  animation: floatUp 8s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-110vh) scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+  .gallery img {
+    width: 140px;
+    height: 180px;
+  }
+}
