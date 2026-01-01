@@ -32,8 +32,19 @@ const text = `كل سنة وأنتى طيبة يا أغلى حاجة في دني
 كل سنة وأنتِ منورة حياتي، وكل سنة وأنا بحبك أكتر من السنه اللي قبلها. ❤️`;
 
 let index = 0;
+let musicStarted = false;
+
 function showMessage() {
   const box = document.getElementById("message");
+  const music = document.getElementById("music");
+
+  // تشغيل الموسيقى أول مرة بس
+  if (!musicStarted) {
+    music.play().catch(() => {});
+    musicStarted = true;
+  }
+
+  // إظهار الرسالة
   box.style.display = "block";
   box.innerHTML = "";
   index = 0;
@@ -45,8 +56,3 @@ function showMessage() {
   }, 35);
 }
 
-// Music
-function toggleMusic() {
-  const music = document.getElementById("music");
-  music.paused ? music.play() : music.pause();
-}
